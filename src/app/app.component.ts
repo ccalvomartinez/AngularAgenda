@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'Angular Module';
-
+  contactos: string[] = [
+    "Fulanito de tal",
+    "Zutanito",
+    "Menganito"
+  ];
   ngOnInit() { 
     console.log('Iniciando componente');
 
+  }
+  eliminarContacto(contacto: string) { 
+    this.contactos = this.contactos.filter((value: string, index: number): boolean => { 
+      return value !== contacto;
+    });
   }
 }

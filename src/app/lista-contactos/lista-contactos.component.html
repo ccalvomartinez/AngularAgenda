@@ -1,3 +1,6 @@
-<p>
-  lista-contactos works!
-</p>
+<ul>
+  <li *ngFor="let contacto of datos">
+    {{ contacto }}
+    <button (click)="notificarEliminacion(contacto)">Eliminar</button>
+  </li>
+</ul>
